@@ -1,7 +1,7 @@
 {
   "name": "vue-message-plug",
   "description": "A Vue.js project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "denghf <1324519118@qq.com>",
   "license": "ISC",
   "private": false,
@@ -32,7 +32,7 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
   },
-  "main": "index.js",
+  "main": "./src/lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/boogie1208/message2-plug.git"
