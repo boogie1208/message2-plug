@@ -54,7 +54,7 @@ export default {
   methods: {
     close () {
       if (this.autoClose) {
-        setTimeOut(() => {
+        setTimeout(() => {
           this.show = false
         }, this.clostTime)
       }
