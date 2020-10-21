@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="message">
     <div v-if="show" :style="{'border': '1px solid #ccc'}">
       <span>{{type}}</span>
       <div>{{message}}</div>
@@ -63,4 +63,7 @@ export default {
 </script>
 
 <style lang="scss">
+.message {
+  font-size: 16px;
+}
 </style>
