@@ -15,6 +15,7 @@ const typeMap = {
   error: 'error'
 };
 export default {
+  name: 'message',
   props: {
     message: {
       type: String,
