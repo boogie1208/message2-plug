@@ -25,18 +25,17 @@ const MessagePlug = {
       props.message = args.message
       props.type = args.type
       console.log(props, 'props.....222222')
-      console.log(options, 'options.....333333')
-      if (typeof options === 'string') {
-        props = {
-          message: options
-        };
-      }
       return props
     }
 
     function funMessage () {
       console.log(arguments, 'arguments.....')
       if (!arguments[0]) return
+      if (typeof arguments[0] === 'string') {
+        arguments[0] = {
+          message: arguments[0]
+        };
+      }
       const propsData = buildProps(arguments[0])
       const instance = new MessageConstructor({propsData})
       document.body.appendChild(instance.$mount().$el)
@@ -51,13 +50,16 @@ if (typeof window !== 'undefined' && window.Vue) {
 // 支持this.$message.success('xxx')方式调用，等同于this.$message({type: 'success',message: 'xxx'})
 ['success', 'warning', 'info', 'error'].forEach(type => {
   MessagePlug[type] = options => {
+    console.log(options, 'options.....11111111111')
     if (typeof options === 'string') {
       options = {
         message: options
       };
     }
     options.type = type;
+    console.log(options, 'options.....22222222222')
     return MessagePlug(options);
   };
+  console.log(MessagePlug[type], 'options.....333333')
 });
 export default MessagePlug
