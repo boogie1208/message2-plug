@@ -16,7 +16,7 @@ const typeMap = {
 };
 const MessagePlug = {
   install(Vue, options) {
-    Vue.component(message.name, message)
+    // Vue.component(message.name, message)
     let MessageConstructor = Vue.extend(message); // 写插件需要用到的
     Vue.prototype.$message = funMessage
     function buildProps (args) {
