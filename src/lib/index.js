@@ -18,7 +18,7 @@ const MessagePlug = {
   install(Vue, options) {
     Vue.component(message.name, message)
     let MessageConstructor = Vue.extend(message); // 写插件需要用到的
-    Vue.property.$message = funMessage
+    Vue.prototype.$message = funMessage
     function buildProps (args) {
       let props = {}
       props.message = args.message
