@@ -20,9 +20,11 @@ const MessagePlug = {
     let MessageConstructor = Vue.extend(message); // 写插件需要用到的
     Vue.prototype.$message = funMessage
     function buildProps (args) {
+      console.log(args, 'args....')
       let props = {}
       props.message = args.message
-      props.title = typeMap[props.type]
+      props.type = args.type
+      console.log(props, 'props.....222222')
       if (typeof options === 'string') {
         props = {
           message: options
@@ -32,6 +34,7 @@ const MessagePlug = {
     }
 
     function funMessage () {
+      console.log(arguments, 'arguments.....')
       if (!arguments[0]) return
       const propsData = buildProps(arguments)
       const instance = new MessageConstructor({propsData})
