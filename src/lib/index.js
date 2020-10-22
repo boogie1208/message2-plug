@@ -37,7 +37,7 @@ const MessagePlug = {
     function funMessage () {
       console.log(arguments, 'arguments.....')
       if (!arguments[0]) return
-      const propsData = buildProps(arguments)
+      const propsData = buildProps(arguments[0])
       const instance = new MessageConstructor({propsData})
       document.body.appendChild(instance.$mount().$el)
     }
