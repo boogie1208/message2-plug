@@ -37,6 +37,8 @@ const MessagePlug = {
       const instance = new MessageConstructor({propsData})
       instance.vm = instance.$mount();
       document.body.appendChild(instance.vm.$el)
+      instance.dom = instance.vm.$el;
+      return instance.vm;
       // const instance = new MessageConstructor({propsData})
       // document.body.appendChild(instance.$mount().$el)
     }
