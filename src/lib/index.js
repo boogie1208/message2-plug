@@ -25,6 +25,7 @@ const MessagePlug = {
       props.message = args.message
       props.type = args.type
       console.log(props, 'props.....222222')
+      console.log(options, 'options.....333333')
       if (typeof options === 'string') {
         props = {
           message: options
