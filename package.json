@@ -1,7 +1,7 @@
 {
   "name": "vue-message-plug",
   "description": "A Vue.js project",
-  "version": "1.0.13",
+  "version": "1.0.15",
   "author": "denghf <1324519118@qq.com>",
   "license": "ISC",
   "private": false,
